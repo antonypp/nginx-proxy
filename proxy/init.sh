@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mount -t tmpfs -o size=256m tmpfs /var/cache/nginx
 cp /etc/hosts /etc/hosts.tmp
 umount /etc/hosts
 mv /etc/hosts.tmp /etc/hosts
