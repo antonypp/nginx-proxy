@@ -60,7 +60,7 @@ server {
 {{ range $index, $value := $containers }}
     {{ if $value.Env.SSL }}
         listen  80;
-        listen  443 default ssl;
+        listen  443 ssl;
         ssl_certificate /certs/{{ $host }}.crt;
         ssl_certificate_key /certs/{{ $host }}.key;
 
