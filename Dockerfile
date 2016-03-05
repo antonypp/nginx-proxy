@@ -1,5 +1,5 @@
 FROM nginx
-MAINTAINER Ke, Mingze <mingze.ke@gmail.com>
+MAINTAINER Anton Taraev <ataraev@me.com>
 
 ADD proxy proxy
 ADD docker-gen-linux-amd64-0.3.8.tar.gz /proxy/bin/
