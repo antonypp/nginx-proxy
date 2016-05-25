@@ -56,6 +56,11 @@ upstream {{ $host }} {
 }
 
 server {
+    server_name www.{{ $host }};
+    return 301 $scheme://{{ $host }}$request_uri;
+}
+
+server {
     server_name {{ $host }};
 {{ range $index, $value := $containers }}
     {{ if $value.Env.SSL }}
